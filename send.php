@@ -2,9 +2,7 @@
 
 ini_set('display_errors', "On");
 
-//$url = 'http://localhost/receive.php';
 $url = 'http://localhost/myapps/phpSendAndReceiveWithJson/receive.php';
-//$url = 'http://localhost:44395/api/members';
 
 $data = array(
     'Name' => 'Sally',
@@ -23,7 +21,4 @@ $context = array(
 );
 
 $html = file_get_contents($url, false, stream_context_create($context));
-//file_get_contents($url, false, stream_context_create($context));
-
-//var_dump($http_response_header);
 echo $html;
